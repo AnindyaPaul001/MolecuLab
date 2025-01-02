@@ -1,0 +1,97 @@
+<html>
+    <head>
+        <title>
+            Admin Log In
+        </title>
+        <style>
+            html, body {
+                height: 100%; /* Make sure the page takes the full height */
+                margin: 0;    /* Remove default margin */
+                display: flex; /* Use flexbox to center the content */
+                justify-content: center; /* Center horizontally */
+                align-items: center;     /* Center vertically */
+            }
+            #container{
+                color: white;
+                height: 300px;
+                width: 400px;
+                display: flex; /* Use flexbox to center the content */
+                flex-direction: column;
+                justify-content: center; /* Center horizontally */
+                align-items: center;     /* Center vertically */
+                background: rgba(0, 0, 0, 0.3); /* Black background with 50% opacity */
+                /*background-image: linear-gradient(rgb(0, 0, 0), rgb(56, 51, 51));*/
+                box-shadow: rgb(6, 62, 167) 5px 5px 50px 10px;
+                backdrop-filter: blur(10px); /* Optional: adds a slight blur to background */
+                
+            }
+            table{
+                color: white;
+            }
+            #title-box{
+                height: 50px;
+                font-size: xx-large;
+            }
+            input{
+                width: 300px;
+                height: 30px;
+                border: none;
+                background: rgba(0, 0, 0, 0.5); /* Black background with 50% opacity */
+                color: white;
+                border-top-left-radius: 10% 100%;
+                border-top-right-radius: 10% 100%;
+                border-bottom-right-radius: 10% 100%;
+                border-bottom-left-radius: 10% 100%;
+            }
+            video {
+                position: absolute; /* Position video relative to the viewport */
+                top: 0;
+                left: 0;
+                width: 100%; /* Make the video cover the full width */
+                height: 100%; /* Make the video cover the full height */
+                object-fit: cover; /* Ensures the video covers the screen without distortion */
+                z-index: -1; /* Sends the video behind the content */
+            }
+            .error {
+                color: red;
+                text-align: center;
+                margin-top: 10px;
+            }
+        </style>
+        <script>
+            function glow(element){
+                element.style.boxShadow = 'rgb(6, 62, 167) 5px 5px 50px 5px';
+            }
+            function notGlow(element){
+                element.style.boxShadow = 'none';
+            }
+        </script>
+    </head>
+    <body>
+        <!-- Video element -->
+        <video autoplay loop muted>
+            <source src="Background.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div id="container">
+            <div id="title-box">Admin Login</div>
+            <div>
+                <form id="loginForm" onsubmit="return validateForm()">
+                    <table>
+                            <tr><td style="padding-top: 10px; font-size: 15px; font-family: Arial, Helvetica, sans-serif;">User Name</td></tr>
+                            <tr><td><input type="text" name="userName" id="username"></td></tr>
+                        
+                            <tr><td style="padding-top: 10px; font-size: 15px; font-family: Arial, Helvetica, sans-serif;">Password</td></tr>
+                            <tr></tr><td><input type="password" name="password" id="password"></td></tr>
+                        
+                            <tr><td><a href="#" style="font-size: 15px;">Forgot Password</a></div></td></tr>
+
+                            <tr><td style="padding-top: 40px;"><input type="submit" value="Login" onmouseover="glow(this)" onmouseout="notGlow(this)" style="font-size: 20px; height: 30px; background-color: rgb(6, 62, 167)"></td>
+                            <tr><td><p id="error-message" class="error"></p></td></tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+        <script src="script_for_admin_Login.js"></script>
+    </body>
+</html>

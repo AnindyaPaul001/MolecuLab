@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MolecuLAB - Chemistry Club JU</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <div id="menu">
+            <div id="heading">
+                <svg xmlns="http://www.w3.org/2000/svg">
+                    <line x1="0" y1="5" x2="150" y2="5"/>
+                </svg>
+                <div class="inner-heading" style="cursor: pointer;" onmouseover="addTextShadow(this)" onmouseout="removeTextShadow(this)">MolecuLab</div>
+                <svg xmlns="http://www.w3.org/2000/svg">
+                    <line x1="150" y1="5" x2="0" y2="5"/>
+                </svg>
+            </div>
+            <nav id="sub-menu">
+                <ul>
+                    <div class="menu-content"><li><a href="home.html">Home</a></li></div>
+                    <div class="menu-content"><li><a href="about.html">About</a></li></div>
+                    <div class="menu-content"><li><a href="events.html">Events</a></li></div>
+                    <div class="menu-content"><li><a href="contact.html">Contact</a></li></div>
+                    <div class="blank"></div>
+                    <li><input type="button" value="Admin LogIn" class="hover-button" onclick="goToAdminLogin()"></li>
+                    <li><input type="button" value="Member LogIn" class="hover-button" onclick="goToMemberLogin()"></li>
+                    <div class="menu-content shaking-div"><li><a href="https://forms.gle/7zCviDmXfCWvqkz5A">Apply Here</a></li></div>
+                </ul>
+            </nav>
+        </div>
+        
+    </header>
+
+    <!-- Video element -->
+    <video autoplay loop muted>
+        <source src="Background.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Content that will be displayed over the video -->
+    <div id="container">
+        <div id="content"></div>
+        <div id="moving-text">
+          <p>A Chemical Association of <span style="color:rgb(204, 103, 44)">Jadavpur University</span></p>
+        </div>
+        <div id="scroll" style="height: 40px;width: 200px;cursor: pointer;" onmouseover="addTextShadow(this)" onmouseout="removeTextShadow(this)">Scroll Down<br><img src="down-arrow.png" height="30px"></div>
+    </div>
+</body>
+</html>

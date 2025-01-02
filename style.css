@@ -1,0 +1,234 @@
+/* Basic styling, you'll need to customize further */
+
+header {
+    color: white;
+    padding: 20px;
+}
+a{
+    color: white;
+}
+#menu{
+    display: flex;
+    justify-content: space-between;
+}
+#heading{
+    text-align: left;
+    font-size: 30px;
+}
+#sub-menu{
+    text-align: right;
+}
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 20px;
+    font-size: 18px;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    overflow: hidden; /* Prevents scrolling */
+}
+/* Video background settings */
+video {
+    position: absolute; /* Position video relative to the viewport */
+    top: 0;
+    left: 0;
+    width: 100%; /* Make the video cover the full width */
+    height: 100%; /* Make the video cover the full height */
+    object-fit: cover; /* Ensures the video covers the screen without distortion */
+    z-index: -1; /* Sends the video behind the content */
+}
+
+/* Content styling */
+
+
+#content {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+    color: white;
+  }
+
+  /* Basic styling for the container and content */
+#container {
+    position: relative;
+    width: 100%;
+    height: 700px;
+    overflow: hidden;
+  }
+  
+
+  
+  #moving-text {
+    position: absolute;
+    bottom: 0px; /* Initially below the container */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 30px;
+    color: white;
+    animation: fadeIn 0s ease-in-out 2s forwards, moveUp 4s ease-in-out 2s forwards; /* Two animations: fadeIn and moveUp */
+  }
+  
+  /* Animation to move the text from bottom to below of the content */
+  @keyframes moveUp {
+    0% {
+      bottom: 0px; /* Starts from below the container */
+    }
+    100% {
+      bottom: 400px; /* Ends just below the content */
+    }
+  }
+  /* Animation to fade in the text */
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+      visibility: hidden;
+    }
+    100% {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  
+/* Blinking effect for the cursor */
+.cursor {
+    font-weight: bold;
+    color: white;
+    display: inline-block;
+    animation: blink 0.8s step-end infinite;
+}
+
+/* Blinking animation for the cursor */
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+.hover-button {
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 100px;
+    border: none;
+
+  }
+  
+  .hover-button:hover {
+    background-color: rgb(56, 117, 187); /* Color on hover */
+    color: white;
+  }
+  
+  .menu-content{
+    display: flex;
+    justify-content: center; /* Horizontally center */
+    align-items: center;     /* Vertically center */
+    padding-left: 20px;
+    border: 1px solid none; /* Optional border for visibility */
+    border-radius: 50px;
+  }
+  .menu-content:hover{
+    background-color: rgb(56, 117, 187);
+  }
+  .blank{
+    width: 10px;
+  }
+  a{
+    text-decoration: none;
+  }
+
+  .highlight {
+    color: #FF5733; /* Example color (orange). Change to any color you like */
+   }
+#scroll{
+    position: absolute;
+    bottom: 10px; /* Initially below the container */
+    left:45%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    text-align: center;
+    transition: text-shadow 0.3s ease;
+    color: white;
+    animation: fadeIn 0s ease-in-out 2s forwards, moveUp1 4s ease-in-out 2s forwards, float 3s ease-in-out infinite; /* Two animations: fadeIn and moveUp */
+}
+@keyframes moveUp1 {
+    0% {
+      bottom: 0px; /* Starts from below the container */
+    }
+    100% {
+      bottom: 220px; /* Ends just below the content */
+    }
+  }
+  @keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+  svg {
+    width: 150px;
+    height: 10px;
+    margin: 0; /* Remove any margin around the SVG */
+}
+line {
+    stroke: white;
+    stroke-width: 2;
+    fill: none;
+    stroke-dasharray: 240; /* This should be equal to the length of the line */
+    stroke-dashoffset: 240;
+    animation: draw 2s ease-in-out forwards;
+    
+}
+@keyframes draw {
+    0% {
+        stroke-dashoffset: 240;
+    }
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+#heading{
+  display: flex;
+  flex-direction: column;
+}
+#line1, #line2, .inner-heading{
+  margin: 0; /* Remove default margin */
+}
+.inner-heading{
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  transition: text-shadow 0.3s ease;
+}
+
+.shaking-div {
+  display: inline-block;
+  font-size: 25px;
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+  animation: shake 1s infinite;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-10px); }
+  50% { transform: translateX(10px); }
+  75% { transform: translateX(-10px); }
+  100% { transform: translateX(10px); }
+}
+
